@@ -1,15 +1,15 @@
-require('dotenv').load();
+// Update with your config settings.
+require('dotenv').config();
 
 module.exports = {
 
   development: {
     client: 'pg',
-    connection: process.env.LOCAL_HOST
+    connection: 'postgres://localhost/flashcards'
   },
 
   production: {
     client: 'pg',
     connection: process.env.DATABASE_URL + '?ssl=true'
   }
-
 };
